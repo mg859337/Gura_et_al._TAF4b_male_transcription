@@ -17,5 +17,5 @@ module load samtools
 
 # find Taf4b motif
 
-findMotifsGenome.pl F-TAF4b_1_peaks.txt ~/data/genomes/Mouse/GRCm39 F-TAF4b_1_motifs/ -size 200 -mask
-findMotifsGenome.pl F-TAF4b_2_peaks.txt ~/data/genomes/Mouse/GRCm39 F-TAF4b_2_motifs/ -size 200 -mask
+findMotifsGenome.pl M-TAF4b_1_peaks.txt ~/data/genomes/Mouse/GRCm39 M-TAF4b_1_motifs/ -size 200 -mask
+findMotifsGenome.pl M-TAF4b_2_peaks.txt ~/data/genomes/Mouse/GRCm39 M-TAF4b_2_motifs/ -size 200 -mask
