@@ -1,15 +1,15 @@
-# The goal of this script is to determine the X:A ratio in E16.5 oocytes between Taf4b-heterozygous versus Taf4b-deficient samples. 
+# The goal of this script is to determine the X:A ratio between Taf4b-heterozygous versus Taf4b-deficient samples. 
 # This procedure is used after determining which genes have an average TPM > 1
 
 # Pull up the TPMs file
 TPMs <- read.csv("~/TPMs_Greater_than_1.csv")
 
-# Average the genotypes
+# Average the genotypes (depends on the number of samples)
 TPMs$HetMeans <- rowMeans(subset(TPMs, select = c("TPM_HET.1","TPM_HET.2","TPM_HET.3","TPM_HET.4","TPM_HET.5")))
 TPMs$DefMeans <- rowMeans(subset(TPMs, select = c("TPM_DEF.1","TPM_DEF.2","TPM_DEF.3","TPM_DEF.4","TPM_DEF.5")))
 
 
-# Set aside the averaged values into a new file, read in a reference table, and merge the two together
+# Set aside the averaged values into a new file, read in a reference table, and merge the two together. Depends on how many samples you have
 Filtered_Avg_TPMs <- cbind(TPMs[,1], TPMs[,12:13])
 colnames(Filtered_Avg_TPMs) <- c("Gene_ID","HetMeans","DefMeans")
 
