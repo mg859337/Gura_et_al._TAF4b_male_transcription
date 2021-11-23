@@ -8,6 +8,8 @@ TPMs <- read.csv("~/TPMs_Greater_than_1.csv", row.names=1)
 
 # Need to log transform. Using pseudocount (+ 1) to avoid invalid log transformation on 0s
 transformed <- log2(TPMs + 1)
+
+#Change this line depending on the number of samples
 colnames(transformed) <- c("Gene_ID","TPM_DEF.1","TPM_DEF.2","TPM_DEF.3","TPM_DEF.4","TPM_DEF.5","TPM_HET.1","TPM_HET.2","TPM_HET.3","TPM_HET.4","TPM_HET.5")
 
 # Read in the reference table full of gene information and then combine with the log-transformed, filtered genes
@@ -22,6 +24,8 @@ head(merged)
 # Separate out X chromosome genes and average the TPMs
 Xchr <- filter(merged, merged$Chromosome == "chrX")
 unique(Xchr$Chromosome)
+
+# Select number of columns based on number of samples
 Xvalues <- Xchr[,2:11]
 head(Xvalues)
 Xmeans <- as.data.frame(colMeans(Xvalues))
@@ -34,6 +38,8 @@ autosomes <- filter(merged, !merged$Chromosome %in% target)
 autosomes <- autosomes %>% filter(!is.na(Chromosome))
 unique(autosomes$Chromosome)
 autosomes$Chromosome <- "autosome"
+
+# Select number of columns based on number of samples
 Avalues <- autosomes[,2:11]
 Ameans <- as.data.frame(colMeans(Avalues))
 head(Ameans)
@@ -42,8 +48,7 @@ head(Ameans)
 RXE <- Xmeans - Ameans
 
 
-# Time to make the plot!
-# Fix the labels
+# Time to make the plot! Make labels depending on number of samples
 RXELabels <- c("Def","Def","Def","Def","Def","Het","Het","Het","Het","Het")
 
 newRXE <- cbind(RXELabels, rownames(RXE), data.frame(RXE, row.names=NULL))
