@@ -1,7 +1,6 @@
 # First convert symbols to entrez IDs
-
 library(org.Mm.eg.db)
-DEGs <- read.table("DEGs.txt") # This is a list of DEGs from DESeq2 saved as a text file
+DEGs <- read.table("DEGs.txt") # This is a list of DEGs saved as a text file
 degs <- as.character(DEGs$V1)
 conversion <- mapIds(org.Mm.eg.db, degs, 'ENTREZID', 'ENSEMBL')
 
