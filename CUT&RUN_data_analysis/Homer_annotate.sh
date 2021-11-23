@@ -16,8 +16,8 @@ module load homer
 module load samtools
 
 # Get general annotation of peaks
-annotatePeaks.pl F-TAF4b_1_peaks.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > F-TAF4b_1_annotated_peaks.txt
-annotatePeaks.pl F-TAF4b_2_peaks.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > F-TAF4b_2_annotated_peaks.txt
+annotatePeaks.pl M-TAF4b_1_peaks.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > M-TAF4b_1_annotated_peaks.txt
+annotatePeaks.pl M-TAF4b_2_peaks.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > M-TAF4b_2_annotated_peaks.txt
 
-annotatePeaks.pl F-H3K4_1_regions.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > F-H3K4_1_annotated_regions.txt
-annotatePeaks.pl F-H3K4_2_regions.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > F-H3K4_2_annotated_regions.txt
+annotatePeaks.pl M-H3K4_1_regions.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > M-H3K4_1_annotated_regions.txt
+annotatePeaks.pl M-H3K4_2_regions.txt ~/data/genomes/Mouse/GRCm39/genome.fa -gtf ~/data/genomes/Mouse/GRCm39/Mus_musculus.GRCm39.103.gtf > M-H3K4_2_annotated_regions.txt
