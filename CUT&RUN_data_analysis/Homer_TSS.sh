@@ -20,8 +20,8 @@ source Homer.venv/bin/activate
 PATH=$PATH:/users/mgura/Apps/Homer.venv/bin/
 cd Homer.venv/
 
-annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/F-TAF4b_1_1.120/ > ~/scratch/F-TAF4b_1_1.120/F-TAF4b_1_TSS.txt
-annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/F-TAF4b_2_1.120/ > ~/scratch/F-TAF4b_2_1.120/F-TAF4b_2_TSS.txt
+annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/M-TAF4b_1_1.120/ > ~/scratch/M-TAF4b_1_1.120/M-TAF4b_1_TSS.txt
+annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/M-TAF4b_2_1.120/ > ~/scratch/M-TAF4b_2_1.120/M-TAF4b_2_TSS.txt
 
-annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/F-H3K4_1_150.500/ > ~/scratch/F-H3K4_1_150.500/F-H3K4_1_TSS.txt
-annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/F-H3K4_2_150.500/ > ~/scratch/F-H3K4_2_150.500/F-H3K4_2_TSS.txt
+annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/M-H3K4_1_150.500/ > ~/scratch/M-H3K4_1_150.500/M-H3K4_1_TSS.txt
+annotatePeaks.pl tss GRCm39 -size 4000 -hist 20 -d ~/scratch/M-H3K4_2_150.500/ > ~/scratch/M-H3K4_2_150.500/M-H3K4_2_TSS.txt
