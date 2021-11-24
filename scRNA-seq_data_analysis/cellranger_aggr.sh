@@ -14,8 +14,8 @@
 
 module load cellranger/6.0.0
 
-cellranger aggr --id=Male_aggr_NoDu \
-					--csv=/users/mgura/scratch/Male_scRNAseq/Libraries_NoDu.csv \
+cellranger aggr --id=Male_aggr \
+					--csv=/users/mgura/scratch/Male_scRNAseq/Libraries.csv \
 					--normalize=none 
 
 
