@@ -1,0 +1,10 @@
+sample_id,molecule_h5
+E12.5, ./Nguyen_E12_E13/Nguyen_E12/outs/molecule_info.h5
+E13.5, ./Nguyen_E12_E13/Nguyen_E13/outs/molecule_info.h5
+E16.5, ./Law_E16_P6/Law_E16/outs/molecule_info.h5
+E18.5, ./Tan_E18_P7/Tan_E18/outs/molecule_info.h5
+P0, ./Law_E16_P6/Law_P0/outs/molecule_info.h5
+P2, ./Tan_E18_P7/Tan_P2/outs/molecule_info.h5
+P3, ./Law_E16_P6/Law_P3/outs/molecule_info.h5
+P6, ./Law_E16_P6/Law_P6/outs/molecule_info.h5
+P7, ./Tan_E18_P7/Tan_P7/outs/molecule_info.h5

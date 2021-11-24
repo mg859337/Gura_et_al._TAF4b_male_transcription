@@ -3,24 +3,19 @@
 # Request resources: 
 #SBATCH --time=40:00:00 
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=120G
+#SBATCH --mem=246G
 
 # Specify a job name: 
-#SBATCH -J cellranger_aggr_Zhao
+#SBATCH -J cellranger_aggr_Male
 
 # Specify output and error files: 
 #SBATCH -o outputfileaggr.out
 #SBATCH -e errorfileaggr.err
 
-module load python/3.5.2
-cd ..
-source cellranger.venv/bin/activate
+module load cellranger/6.0.0
 
-cd cellranger.venv/
-cd cellranger-5.0.0/
+cellranger aggr --id=Male_aggr_NoDu \
+					--csv=/users/mgura/scratch/Male_scRNAseq/Libraries_NoDu.csv \
+					--normalize=none 
 
-export PATH=/users/mgura/scratch/cellranger.venv/cellranger-5.0.0:$PATH
 
-cellranger aggr --id=Zhao_aggr \
-					--csv=/users/mgura/scratch/Zhao/Zhao_libraries.csv \
-					--normalize=mapped 
