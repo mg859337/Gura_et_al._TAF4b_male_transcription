@@ -16,7 +16,7 @@ module load cellranger/6.0.0
 
 # Change id, fastqs, and sample based on sample name and file locations. E12.5 used as an example
 
-cellranger count 	--id=E12_germ_cells \
+cellranger count 	--id=E12.5 \
 					--transcriptome=../refdata-gex-mm10-2020-A \
 					--fastqs=/users/mgura/scratch/Zhao \
-					--sample=E12.5
+					--sample=Nguyen_E12
